@@ -8,6 +8,9 @@ const course_enrollement = require("../models/enrollModel")
 
 router.get("/",async(req,res)=>{
 // const {course,email =req.body
+// var username = "Ruqia.code@gmail.com";
+// var password = "ATATT3xFfGF0KRwVELdFnkeTeZ1teF7U03--nP0A2iVNzSj74vIxbig-c4wRml6qafK1vwrvkbN3WdIjAUrNvahbBTLP2XM9j7OCiySuuYoDhno4VtD8bBo5KZNwRW5rJ9l6GbWRyVSH9YgEZUCR7Yy5Bs6dPxwMHO42IyKPjpBDXX4DdiiyCZw=158BF949";
+// var auth = "Basic " + new Buffer.alloc(username + ":" + password).toString("base64");
   
     // const s= await course_enrollement.find({})
 
@@ -16,12 +19,22 @@ router.get("/",async(req,res)=>{
     // }
     // res.status(200).json(s)
     try{
-
-    request('https://ruqiahussain.atlassian.net/rest/api/3/user/search?accountId=712020:ab45fef9-7ae3-410b-8737-f36ce7e00f6a', function(error, response, body) {
-      //  res.json(body)
-        res.status(200).json(body)
+        // var options = {
+        //     url: 'https://ruqiahussain.atlassian.net/rest/api/3/users/search?',
+        //     auth: {
+        //       Username: "Ruqia.code@gmail.com",
+        //       Password: "ATATT3xFfGF0KRwVELdFnkeTeZ1teF7U03--nP0A2iVNzSj74vIxbig-c4wRml6qafK1vwrvkbN3WdIjAUrNvahbBTLP2XM9j7OCiySuuYoDhno4VtD8bBo5KZNwRW5rJ9l6GbWRyVSH9YgEZUCR7Yy5Bs6dPxwMHO42IyKPjpBDXX4DdiiyCZw=158BF949"
+        //     }
+        //   }
+        //  'https://ruqiahussain.atlassian.net/rest/api/3/user/search?accountId=712020:ab45fef9-7ae3-410b-8737-f36ce7e00f6a'
+    // request({url:'https://ruqiahussain.atlassian.net/rest/api/3/users/search?', headers : {
+    //     "Authorization" : auth
+    // }}, function(error, response, body) {
+    //   //  res.json(body)
+    //     res.status(200).json(body)
+    //res.status(200).json({msg:"code"})
     
-    });
+    // });
 }catch(error){
     return res.status(404).json({error:"No enrollements"})   
 }
